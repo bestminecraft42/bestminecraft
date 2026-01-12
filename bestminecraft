@@ -1,79 +1,151 @@
-<<!DOCTYPE html><html lang="uk">
+<!DOCTYPE html><html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BestMinecraft — Головна</title>
+  <meta charset="UTF-8" />
+  <title>Best Minecraft — Гриферское выживание</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      color: white;
-      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
-      background-size: cover;
-      animation: backgroundMove 30s infinite linear;
-    }
-    @keyframes backgroundMove {
-      0% { background-position: 0 0; }
-      100% { background-position: 1000px 1000px; }
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      text-align: center;
     }
     header {
-      padding: 2rem;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.7);
+      padding: 40px 20px;
     }
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
+    h1 {
+      font-size: 46px;
+      margin-bottom: 10px;
     }
-    .ip {
-      font-size: 1.2rem;
-      background: #2b2b2b;
+    .ip-box {
+      background: rgba(0,0,0,0.45);
       display: inline-block;
-      padding: 0.5rem 1rem;
-      margin-top: 1rem;
-      border-radius: 8px;
+      padding: 15px 25px;
+      border-radius: 14px;
+      margin: 20px 0;
+      font-size: 22px;
+      cursor: pointer;
     }
     .section {
-      padding: 2rem;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.6);
-      margin: 1rem;
-      border-radius: 12px;
+      margin: 50px 15px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 14px;
+      margin-bottom: 15px;
+    }
+    .price {
+      font-size: 20px;
+      color: #00e676;
+      font-weight: bold;
+      margin: 10px 0;
     }
     .btn {
       display: inline-block;
-      padding: 0.75rem 1.5rem;
-      margin: 1rem;
-      background: #4caf50;
-      color: white;
-      border-radius: 8px;
+      padding: 12px 28px;
+      background: #00c853;
+      color: #000;
+      border-radius: 30px;
+      font-size: 16px;
       text-decoration: none;
-      transition: background 0.3s;
+      font-weight: bold;
+      transition: 0.3s;
     }
     .btn:hover {
-      background: #43a047;
+      background: #00e676;
     }
     footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #aaa;
+      margin-top: 60px;
+      padding: 20px;
+      font-size: 14px;
+      opacity: 0.8;
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1>BestMinecraft</h1>
-    <div class="ip">IP: bestminecraft.aternos.me</div>
-  </header>  <div class="section">
-    <h2>Про сервер</h2>
-    <p>Ласкаво просимо на BestMinecraft — крутий український сервер з міні-іграми, виживанням та донат-системою! Працюємо 24/7.</p>
-  </div>  <div class="section">
-    <h2>Приєднуйся до нас</h2>
-    <a class="btn" href="https://t.me/YOUR_TELEGRAM_BOT" target="_blank">Донат через Telegram</a>
-    <a class="btn" href="https://t.me/YOUR_DISCORD_LINK" target="_blank">Наш Discord</a>
-  </div>  <footer>
-    © 2025 BestMinecraft. Неофіційний фан-сайт. Всі права на Minecraft належать Mojang.
-  </footer>
-</body>
+<body><header>
+  <h1>BEST MINECRAFT</h1>
+  <p>Гриферское выживание • PvP • Донат без вайпов</p>  <div class="ip-box" onclick="copyIP()">
+    IP: <b>bestminecraft.exaroton.me</b>
+  </div>
+  <p>Нажми, чтобы скопировать IP</p>
+</header><div class="section">
+  <h2>⚔️ Режим сервера</h2>
+  <div class="card" style="max-width:500px;margin:0 auto;">
+    <h3>Гриферское выживание</h3>
+    <p>🔓 Offline (без лицензии)</p>
+    <p>💣 Разрешён гриф • 🔥 PvP • 💎 Донат</p>
+  </div>
+</div><div class="section">
+  <h2>💎 Донат (₴ ГРИВНЫ)</h2>
+  <div class="cards"><div class="card">
+  <img src="https://i.imgur.com/0Z8FQYH.png" alt="Lite">
+  <h3>LITE</h3>
+  <p>Стартовый набор привилегий</p>
+  <div class="price">49 ₴</div>
+  <a class="btn" href="#">Купить</a>
+</div>
+
+<div class="card">
+  <img src="https://i.imgur.com/1bX5QH6.png" alt="King">
+  <h3>KING</h3>
+  <p>Команды и бонусы для PvP</p>
+  <div class="price">99 ₴</div>
+  <a class="btn" href="#">Купить</a>
+</div>
+
+<div class="card">
+  <img src="https://i.imgur.com/yK9Y9Qn.png" alt="Zevs">
+  <h3>ZEVS</h3>
+  <p>Молнии, усиления, статус</p>
+  <div class="price">149 ₴</div>
+  <a class="btn" href="#">Купить</a>
+</div>
+
+<div class="card">
+  <img src="https://i.imgur.com/8UQZ9mK.png" alt="Warden">
+  <h3>WARDEN</h3>
+  <p>Максимальная защита и сила</p>
+  <div class="price">199 ₴</div>
+  <a class="btn" href="#">Купить</a>
+</div>
+
+<div class="card">
+  <img src="https://i.imgur.com/L9xJQzH.png" alt="Wiper">
+  <h3>WIPER</h3>
+  <p>Уничтожение врагов без шансов</p>
+  <div class="price">249 ₴</div>
+  <a class="btn" href="#">Купить</a>
+</div>
+
+<div class="card">
+  <img src="https://i.imgur.com/fQH9F8k.png" alt="Gigantic">
+  <h3>GIGANTIC</h3>
+  <p>Топ-донат для легенд сервера</p>
+  <div class="price">349 ₴</div>
+  <a class="btn" href="#">Купить</a>
+</div>
+
+  </div>
+</div><footer>
+  © 2026 Best Minecraft • Оплата: Google Pay / Банковские карты
+</footer><script>
+  function copyIP() {
+    navigator.clipboard.writeText("bestminecraft.exaroton.me");
+    alert("IP сервера скопирован!");
+  }
+</script></body>
 </html>
